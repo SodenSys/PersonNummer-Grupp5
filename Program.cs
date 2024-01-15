@@ -10,7 +10,7 @@
 
 			/* TODO METODER
 			1: Kolla så att första 6 siffrorna stämmer (Shayan)
-			2: Kolla så att siffra 7,8,9 Stämmer (Dina)
+			2: Kolla så att siffra 7,8,9 Stämmer (Dalia)
 			3: Kolla så att Kontrollsiffran stämmer (_Soden)
 
 			OBS : Notera att vi sparat upp i en int Array och inte en INT, så metoderna ska jobba med indexeringen för att jämföra och
@@ -63,11 +63,28 @@
 			return summa % 10 == 0;
 		}
 
-		/* static char[] KollaFödelseOchKön()
+		/* static int[] KollaFödelseOchKön()
 		{
-			Kolla så att siffra 7,8,9 Stämmer (Dina)
+			Kolla så att siffra 7,8,9 Stämmer (Dalia) */
+
+		static void VisaKönOchFödelseplats(int[] personnummer)
+		{
+			int könsNummer = personnummer[8];
+			int födelseNummer1 = personnummer[6];
+			int födelseNummer2 = personnummer[7];
+
+			string kön = (könsNummer % 2 == 0) ? "kvinna" : "man"; //kontrollerar kön
+			string födelseort = $"{födelseNummer1}{födelseNummer2}"; //kontrollerar födelseplats 
+
+			Console.WriteLine($"Personen är en {kön} som är född i denna födelseplats: {födelseort}"); //Resultat
 		}
-		*/
+
+
+
+
+
+	}
+		
 
 		static char[] SkapaCharArray()
 		{
