@@ -77,7 +77,7 @@
 
         Console.Write("Ange ditt personnummer, 10 siffror, utan bindestreck: ");
 
-        string input = Console.ReadLine();
+        string input = Console.ReadLine()!;
 
         if (input.Length == 10) // Säkerställer att användaren skrev in 10 chars
         {
