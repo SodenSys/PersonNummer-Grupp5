@@ -28,7 +28,7 @@ public class SpnGFProgramTests
         int[] IntArray = { 9, 6, 1, 1, 1, 9 };
         using (StringWriter sw = new StringWriter())
         {
-            Console.SetOut(sw);
+            SetOut(sw);
 
             SpnGFProgram.ControlFirstSixDigits(IntArray);
             string actualOutput = sw.ToString().Trim();
@@ -44,7 +44,7 @@ public class SpnGFProgramTests
         string expectedOutput = "Ogiltig månad, testa igen";
         using (StringWriter sw = new StringWriter())
         {
-            Console.SetOut(sw);
+            SetOut(sw);
 
             SpnGFProgram.ControlFirstSixDigits(IntArray);
             string actualOutput = sw.ToString().Trim();
@@ -60,7 +60,7 @@ public class SpnGFProgramTests
         string expectedOutput = "Ogiltig dag, testa igen";
         using (StringWriter sw = new StringWriter())
         {
-            Console.SetOut(sw);
+            SetOut(sw);
 
             SpnGFProgram.ControlFirstSixDigits(invalidDayIntArray);
             string actualOutput = sw.ToString().Trim();
