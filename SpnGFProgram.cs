@@ -7,14 +7,14 @@
         int[] SocialSecurityNumberIntArray = ConvertIntoIntArray(SocialSecurityNumberCharray); // Sen konverterar vi arrayn till en int array för att kunna göra matte
         ControlFirstSixDigits(SocialSecurityNumberIntArray);
 
-        Console.Write("Ditt Personnummer är : ");
+        Write("Ditt Personnummer är : ");
         foreach (int Digit in SocialSecurityNumberIntArray)
         {
-            Console.Write(Digit); // Skriver ut personnummret för att dubellkolla att allt är rätt
+            Write(Digit); // Skriver ut personnummret för att dubellkolla att allt är rätt
         }
 
         bool isValid = ControlLastDigit(SocialSecurityNumberIntArray); // Här kollar vi om personnumret är giltigt enligt Luhn-algoritmen. (Dennis)
-        Console.Write(" och personnumret är " + (isValid ? "giltigt.\n" : "ogiltigt.\n"));
+        Write(" och personnumret är " + (isValid ? "giltigt.\n" : "ogiltigt.\n"));
 
         ReadBirthplaceAndSex(SocialSecurityNumberIntArray);
 
@@ -51,22 +51,22 @@
     {
         if (intArray[2] > 1)
         {
-            Console.WriteLine("Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.");
+            WriteLine("Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.");
             Environment.Exit(1);
         }
         else if (intArray[4] > 3)
         {
-            Console.WriteLine("Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.");
+            WriteLine("Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.");
             Environment.Exit(1);
         }
         else if (intArray[2] == 1 && intArray[3] > 2)
         {
-            Console.WriteLine("Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.");
+            WriteLine("Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.");
             Environment.Exit(1);
         }
         else if (intArray[4] == 3 && intArray[5] > 1)
         {
-            Console.WriteLine("Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.");
+            WriteLine("Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.");
             Environment.Exit(1);
         }
     }
@@ -75,9 +75,9 @@
     {
         char[] charArray = new char[10];
 
-        Console.Write("Ange ditt personnummer, 10 siffror, utan bindestreck: ");
+        Write("Ange ditt personnummer, 10 siffror, utan bindestreck: ");
 
-        string input = Console.ReadLine()!;
+        string input = ReadLine()!;
 
         if (input.Length == 10) // Säkerställer att användaren skrev in 10 chars
         {
@@ -88,7 +88,7 @@
         }
         else
         {
-            Console.WriteLine("Ogiltigt personnummer. Var vänlig ange 10 siffror.");
+            WriteLine("Ogiltigt personnummer. Var vänlig ange 10 siffror.");
             return CreateCharArray(); // Börjar om i metoden, så att användaren får en chans till
         }
 
@@ -107,7 +107,7 @@
             }
             else
             {
-                Console.WriteLine("Vänligen använd endast siffror"); // Om använder skrev in 10 chars, men ena eller flera INTE är siffror
+                WriteLine("Vänligen använd endast siffror"); // Om använder skrev in 10 chars, men ena eller flera INTE är siffror
                 Environment.Exit(1);
             }
         }
@@ -124,7 +124,7 @@
         string Sex = (SexNumber % 2 == 0) ? "kvinna" : "man"; //kontrollerar Sex
         string Birthplace = $"{BirthplaceNumberOne}{BirthplaceNumberTwo}"; //kontrollerar födelseplats 
 
-        Console.WriteLine($"Personen är en {Sex} som är född i födelseplats nummer : {Birthplace}"); //Resultat
+        WriteLine($"Personen är en {Sex} som är född i födelseplats nummer : {Birthplace}"); //Resultat
     }
 
 }
