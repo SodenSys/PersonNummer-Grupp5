@@ -51,23 +51,19 @@
     {
         if (intArray[2] > 1)
         {
-            Console.WriteLine("Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.");
-            Environment.Exit(1);
+            Console.WriteLine("Ogiltig månad, testa igen");
         }
         else if (intArray[4] > 3)
         {
-            Console.WriteLine("Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.");
-            Environment.Exit(1);
+            Console.WriteLine("Ogiltig dag, testa igen");
         }
         else if (intArray[2] == 1 && intArray[3] > 2)
         {
-            Console.WriteLine("Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.");
-            Environment.Exit(1);
+            Console.WriteLine("Ogiltig månad, testa igen");
         }
         else if (intArray[4] == 3 && intArray[5] > 1)
         {
-            Console.WriteLine("Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.");
-            Environment.Exit(1);
+            Console.WriteLine("Ogiltig dag, testa igen");
         }
     }
 
@@ -126,5 +122,4 @@
 
         Console.WriteLine($"Personen är en {Sex} som är född i födelseplats nummer : {Birthplace}"); //Resultat
     }
-
 }

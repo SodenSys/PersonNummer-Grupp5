@@ -41,7 +41,7 @@ public class SpnGFProgramTests
     public void ControlFirstSixDigits_CheckIfMonthInvalid() // Testar om den lyckas identifiera när en fel månad slås in
     {
         int[] IntArray = { 9, 6, 1, 3, 1, 9 };
-        string expectedOutput = "Ogiltligt månad i personnumret, vänligen ange personnummret på nytt.";
+        string expectedOutput = "Ogiltig månad, testa igen";
         using (StringWriter sw = new StringWriter())
         {
             Console.SetOut(sw);
@@ -57,7 +57,7 @@ public class SpnGFProgramTests
     public void ControlFirstSixDigits_InvalidDay() // Testar om den lyckas identifiera när en fel dag slås in
     {
         int[] invalidDayIntArray = { 9, 6, 1, 1, 3, 2 };
-        string expectedOutput = "Ogiltligt dag i personnumret, vänligen ange personnummret på nytt.";
+        string expectedOutput = "Ogiltig dag, testa igen";
         using (StringWriter sw = new StringWriter())
         {
             Console.SetOut(sw);
