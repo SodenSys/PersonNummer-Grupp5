@@ -2,7 +2,7 @@
 
 Tillsammans har vår grupp skapat ett GitHub-projekt som består av en personnummerskontroll/applikation. Detta projekt inkluderar även enhetstester och användning av GitHub Actions samt användning av Docker.
 
-<h2>Lokal körning av koden</h2>
+<h4>Lokal körning av koden</h4>
 
 För att kunna köra applikationen lokalt så behöver dessa steg följas:
 
