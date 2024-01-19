@@ -79,7 +79,7 @@ public class SpnGFProgram
 		{
 		string input = ReadLine();
 
-		if (input.Length == 10) // Säkerställer att användaren skrev in 10 chars
+		if (!string.IsNullOrEmpty(input) && input.Length == 10) // Säkerställer att användaren skrev in 10 chars
 		{
 			for (int i = 0; i < 10; i++)
 			{
@@ -95,7 +95,7 @@ public class SpnGFProgram
 		}
 		catch (Exception e)
 		{
-			WriteLine(e.Message);
+			WriteLine($"Exception: {e}");
 		}
 		
 		return charArray;
