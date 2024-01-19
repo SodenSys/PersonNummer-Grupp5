@@ -2,7 +2,7 @@
 
 Tillsammans har vår grupp skapat ett GitHub-projekt som består av en personnummerskontroll/applikation. Detta projekt inkluderar även enhetstester och användning av GitHub Actions samt användning av Docker.
 
-Lokal körning av koden
+<h2>Lokal körning av koden</h2>
 
 För att kunna köra applikationen lokalt så behöver dessa steg följas:
 
@@ -15,7 +15,7 @@ Efter att du klonat projektet så är det bara att öppna upp projektet i din va
 
 <h4>Körning i Docker</h4>
 
-Om du vill hellre vill köra applikationen som en Docker-container istället så behöver
+Om du hellre vill köra applikationen som en Docker-container istället så behöver
 dessa steg följas:
 
 1. Ladda ner och installera Docker Desktop. https://www.docker.com/products/docker-desktop/
