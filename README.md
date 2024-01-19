@@ -1,6 +1,6 @@
 <h2>Personnummersvalidering</h2>
 
-Tillsammans har vår grupp skapat ett GitHub-projekt som består av en personnummerskontroll/applikation. Detta projekt inkluderar även enhetstester och användning av GitHub Actions samt användning av Docker.
+Tillsammans har vår grupp (Shayan,Dennis,Dalia) skapat ett GitHub-projekt som består av en personnummerskontroll/applikation. Detta projekt inkluderar även enhetstester och användning av GitHub Actions samt användning av Docker.
 
 <h4>Lokal körning av koden</h4>
 
@@ -45,19 +45,19 @@ Koden som vi har gjort kontrollerar och säkerställer att det angivna personnum
 följer de svenska reglerna som finns för det. Nedan så har vi listat några av kodens
 funktioner samt hur koden genomför sina kontroller.
 
-1. Verifierar så att personnumret är giltigt enligt Luhn-algoritmen
 ● Vi har implementerat Luhn-algoritmen i vår kod för att kunna säkerställa giltigheten
-av personnumret.
-2. Kontrollerar födelseplats samt kön av person
-● Koden analyserar de sista siffrorna och kan på så sätt identifera kön samt
-fördelseplats av individ.
-3. Säkerställer så att inmatningen blir korrekt
+av personnumret. Via en uträkning av alla resterande 9 nummer så säkerställer koden
+att den tionde siffran i personnummret blir rätt. Om denna är fel så betyder det
+att något annat är fel i personnummret.
+
+● Koden analyserar siffra 9,8 och 7 för att identifiera kön och födelseplatsen för personen.
+
 ● Det finns implementerade kontroller som ser till att endast en inmatning av 10 siffror
 blir giltig. Skrivs det något annat så kommer ett felmeddelande fram och ber
 användaren om korrekt inmatning.
 
 ● Det kontrolleras även så att det inte blir en inmatning som överstiger månad 12 samt
-dag 31, då det går emot reglerna för ett svenskt personnummer.
+dag 31, då det endast finns 12 månader samt max 31 dagar i en månad.
 
 Sammanfattningsvis så har vår grupp skapat en personnummers applikation med möjlighet
 för både lokal körning och körning av Docker-container. Vår applikation är uppbyggd efter de
