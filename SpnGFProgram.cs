@@ -1,13 +1,13 @@
 ﻿public class SpnGFProgram
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
 
-        char[] SocialSecurityNumberCharray = CreateCharArray(); // Först sparar vi in personnummret som chars
+        char[]? SocialSecurityNumberCharray = CreateCharArray(); // Först sparar vi in personnummret som chars
         int[] SocialSecurityNumberIntArray = ConvertIntoIntArray(SocialSecurityNumberCharray); // Sen konverterar vi arrayn till en int array för att kunna göra matte
         ControlFirstSixDigits(SocialSecurityNumberIntArray);
 
-        Write("Ditt Personnummer är : ");
+        Write("Ditt Personnummer är: ");
         foreach (int Digit in SocialSecurityNumberIntArray)
         {
             Write(Digit); // Skriver ut personnummret för att dubellkolla att allt är rätt
