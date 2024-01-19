@@ -5,7 +5,7 @@ public class SpnGFProgram
 	public static void Main(string[] args)
 	{
 
-		char[]? SocialSecurityNumberCharray = CreateCharArray(); // Först sparar vi in personnummret som chars
+		char[] SocialSecurityNumberCharray = CreateCharArray(); // Först sparar vi in personnummret som chars
 		int[] SocialSecurityNumberIntArray = ConvertIntoIntArray(SocialSecurityNumberCharray); // Sen konverterar vi arrayn till en int array för att kunna göra matte
 		ControlFirstSixDigits(SocialSecurityNumberIntArray);
 
@@ -77,7 +77,7 @@ public class SpnGFProgram
 
 		try
 		{
-		string input = ReadLine();
+		string? input = ReadLine();
 
 		if (!string.IsNullOrEmpty(input) && input.Length == 10) // Säkerställer att användaren skrev in 10 chars
 		{
@@ -95,7 +95,9 @@ public class SpnGFProgram
 		}
 		catch (Exception e)
 		{
-			WriteLine($"Exception: {e}");
+		    WriteLine($"Exception: {e}");
+		    WriteLine($"Exception Type: {e.GetType().Name}");
+		    Environment.Exit(1);
 		}
 		
 		return charArray;
